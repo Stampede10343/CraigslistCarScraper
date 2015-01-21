@@ -32,7 +32,10 @@ def getLinks(input):
 			badLinks.append(badLink)
 
 	for l in badLinks:
-		del linkWithText[l]
+		try:
+			del linkWithText[l]
+		except KeyError:
+			pass
 	
 	return linkWithText.values()
 

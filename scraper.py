@@ -30,7 +30,7 @@ def scrapePost(url, outputFile):
 	
 	output.write("<header>")
 	output.write("<h3>" + title.title() + "</h3>")
-	output.write("<h4>" + url + "</h4>")
+	output.write("<h4>" + '<a href="' + url + '">link</a>' + "</h4>")
 	output.write("</header>" )
 
 	for line in body:
